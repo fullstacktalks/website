@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Person do
+  let(:person){ create(:person) }
+
   it "should have a unique email address" do
     Person.create(name: 'Michael', email: 'user@example.com', password: '1234')
     Person.create(name: 'Tanner', email: 'user@example.com', password: '1234')
@@ -23,5 +25,11 @@ describe Person do
   end
   it "passes validation with a password" do
     Person.new(:password => "1234").should have(:no).errors_on(:password)
+  end
+
+  it 'has many events' do
+    event = create(:event)
+    event.people << person
+    person.events.should include(event)
   end
 end
