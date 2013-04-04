@@ -1,16 +1,10 @@
 require 'spec_helper'
 
-describe "Home Page" do
-  it "should have a title" do
-    get "/"
-    expect(response.body).to include("Full Stack Talks")
-  end
-end
-
 describe "About Page" do
   it "should have a title" do
     get "about"
-    expect(response.body).to include("About - Full Stack Talks")
+    expect(response.body).to include("About &mdash; Full Stack Talks")
+
   end
 end
 

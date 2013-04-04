@@ -1,0 +1,21 @@
+%h1 Full Stack Talks
+
+%h3= link_to "People", people_path
+%table
+  %tr
+    %th Name
+    %th Company
+    %th Position
+    %th
+  - if  @people.empty?
+    %tr
+      %td{ colspan: 4 } #{link_to 'Add some peeps!', new_person_path}
+  - else
+    - @people.each do |person|
+      %tr
+        %td= person.name
+        %td= person.company
+        %td= person.position
+        %td= link_to 'Show', person
+
+%br
