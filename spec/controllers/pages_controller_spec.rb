@@ -11,6 +11,10 @@ describe PagesController do
       get :index
       response.should render_template("index")
     end
+    it "assigns @people" do
+      get :index
+      assigns(:people).should eq([])
+    end
   end
 
   describe "GET about" do
