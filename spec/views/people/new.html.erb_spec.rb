@@ -1,13 +1,7 @@
 require 'spec_helper'
 
 describe "people/new" do
-  before(:each) do
-    assign(:person, stub_model(Person,
-      :name => "MyString",
-      :email => "MyString",
-      :password => "MyString"
-    ).as_new_record)
-  end
+  before (:each) { @person = build(:person) }
 
   it "renders new person form" do
     render
@@ -17,6 +11,8 @@ describe "people/new" do
       assert_select "input#person_name[name=?]", "person[name]"
       assert_select "input#person_email[name=?]", "person[email]"
       assert_select "input#person_password[name=?]", "person[password]"
+      assert_select "input#person_company[name=?]", "person[company]"
+      assert_select "input#person_position[name=?]", "person[position]"
     end
   end
 end
