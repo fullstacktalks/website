@@ -1,4 +1,7 @@
 FullStackTalks::Application.routes.draw do
+  resources :events
+
+
   resources :talks
 
 
