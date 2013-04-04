@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %b Title:
+  = @talk.title
+%p
+  %b Description:
+  = @talk.description
+= link_to 'Edit', edit_talk_path(@talk)
+|
+\#{link_to 'Back', talks_path}
