@@ -16,7 +16,8 @@ describe 'Home Page' do
 
   context 'when people exist' do
     before(:each) do
-      Person.stub(:all).and_return([build(:person, name: 'Tanner'), build(:person, name: 'Michael')])
+      create(:person, name: 'Tanner', email: 'tanner@pco.com')
+      create(:person, name: 'Michael', email: 'michael@pco.com')
     end
 
     it 'should have people list' do
