@@ -27,7 +27,7 @@ describe Person do
     Person.new(:password => "1234").should have(:no).errors_on(:password)
   end
 
-  it 'has many events' do
+  it 'has events' do
     event = create(:event)
     event.people << person
     person.events.should include(event)
