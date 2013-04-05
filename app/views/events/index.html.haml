@@ -18,7 +18,7 @@
       %td= event.description
       %td= link_to 'Show', event
       %td= link_to 'Edit', edit_event_path(event)
-      %td= link_to 'Destroy', event, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Destroy', event, method: :delete, confirm: "Are you sure?"
 
 %br
 

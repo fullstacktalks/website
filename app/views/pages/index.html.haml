@@ -17,5 +17,10 @@
         %td= person.company
         %td= person.position
         %td= link_to 'Show', person
-
 %br
+  - if @next_event.nil?
+    %span No more events!
+  - else
+    %h3 Next Event
+    %h5= @next_event.date.strftime("%A, %b %y %I:%M %p")
+    %p #{@next_event.title} #{link_to 'Show', @next_event}
