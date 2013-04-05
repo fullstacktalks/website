@@ -3,7 +3,10 @@ require 'spec_helper'
 describe EventsController do
 
   def valid_attributes
-    { "title" => "MyString" }
+    {
+      "title" => "MyString",
+      "date" => "2013-04-04 15:38:39"
+    }
   end
 
   def valid_session
