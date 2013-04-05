@@ -27,4 +27,22 @@ describe 'Home Page' do
     end
   end
 
+  context 'when a next event exists' do
+    before(:each) do
+      create(:event, title: 'Hello World', date: Date.tomorrow)
+    end
+
+    it 'should have next event object' do
+      get '/'
+      expect(response.body).to include('Hello World')
+    end
+  end
+
+  context 'when a next event does not exists' do
+    it 'should present no upcoming events message' do
+      get '/'
+      expect(response.body).to include('No more events!')
+    end
+  end
+
 end
