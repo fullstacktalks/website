@@ -1,7 +1,4 @@
-# SQLite version 3.x
 #   gem install pg
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'pg'
 development:
   adapter: postgresql
