@@ -25,6 +25,8 @@ class TalksController < ApplicationController
   # GET /talks/new.json
   def new
     @talk = Talk.new
+    @future_events = Event.where("date >= ?", Time.now).order("date")
+    # @future_event_hash = @future_events.map { |model| model.attributes.slice(:id, :title) }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +37,7 @@ class TalksController < ApplicationController
   # GET /talks/1/edit
   def edit
     @talk = Talk.find(params[:id])
+    @future_events = Event.where("date >= ?", Time.now).order("date")
   end
 
   # POST /talks

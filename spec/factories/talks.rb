@@ -4,5 +4,6 @@ FactoryGirl.define do
   factory :talk do
     title "Talk Title"
     description "Talk Description"
+    event
   end
 end
