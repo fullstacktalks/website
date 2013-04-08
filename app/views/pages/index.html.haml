@@ -24,3 +24,9 @@
     %h3 Next Event
     %h5= l @next_event.date, :format => :medium
     %p #{@next_event.title} #{link_to 'Show', @next_event}
+    - if @next_event_talks.empty?
+      %span No more talks!
+    - else
+      - @next_event_talks.each do |talk|
+        %p #{talk.title}: #{talk.description}
+%br
