@@ -18,6 +18,7 @@ group :development, :test do
   gem 'mailcatcher'
   gem 'rb-fsevent'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 group :assets do
