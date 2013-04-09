@@ -1,4 +1,6 @@
 class TalksController < ApplicationController
+  before_filter :load_data, [:new, :edit]
+
   # GET /talks
   # GET /talks.json
   def index
@@ -79,5 +81,11 @@ class TalksController < ApplicationController
       format.html { redirect_to talks_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def load_data
+    @future_events = Event.where("date >= ?", Time.now).order("date")
   end
 end

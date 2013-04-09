@@ -5,6 +5,10 @@
 %p
   %b Description:
   = @talk.description
+%p
+  %b What Event?:
+  = @talk.event.title
+
 = link_to 'Edit', edit_talk_path(@talk)
 |
 \#{link_to 'Back', talks_path}

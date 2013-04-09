@@ -19,6 +19,10 @@ describe PagesController do
       get :index
       assigns(:next_event).should eq(nil)
     end
+    it 'assigns @next_event_talks' do
+      get :index
+      assigns(:next_event_talks).should eq([])
+    end
   end
 
   describe "GET about" do

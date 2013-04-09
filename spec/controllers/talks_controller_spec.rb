@@ -1,9 +1,14 @@
 require 'spec_helper'
 
 describe TalksController do
+  let!(:talk) { create(:talk) }
+  let(:event) { create(:event) }
 
   def valid_attributes
-    { "title" => "MyString" }
+    {
+      title: "MyString",
+      event_id: event.id
+    }
   end
 
   def valid_session
@@ -12,7 +17,6 @@ describe TalksController do
 
   describe "GET index" do
     it "assigns all talks as @talks" do
-      talk = Talk.create! valid_attributes
       get :index, {}, valid_session
       assigns(:talks).should eq([talk])
     end
@@ -20,7 +24,6 @@ describe TalksController do
 
   describe "GET show" do
     it "assigns the requested talk as @talk" do
-      talk = Talk.create! valid_attributes
       get :show, {:id => talk.to_param}, valid_session
       assigns(:talk).should eq(talk)
     end
@@ -31,13 +34,22 @@ describe TalksController do
       get :new, {}, valid_session
       assigns(:talk).should be_a_new(Talk)
     end
+
+    it 'assings events as @future_events' do
+      get :new, {}, valid_session
+      assigns(:future_events).should include(event)
+    end
   end
 
   describe "GET edit" do
     it "assigns the requested talk as @talk" do
-      talk = Talk.create! valid_attributes
       get :edit, {:id => talk.to_param}, valid_session
       assigns(:talk).should eq(talk)
+    end
+
+    it 'assings the requested future_events as @future_events' do
+      get :edit, {:id => talk.to_param}, valid_session
+      assigns(:future_events).should include(event)
     end
   end
 
@@ -81,7 +93,6 @@ describe TalksController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested talk" do
-        talk = Talk.create! valid_attributes
         # Assuming there are no other talks in the database, this
         # specifies that the Talk created on the previous line
         # receives the :update_attributes message with whatever params are
@@ -91,13 +102,11 @@ describe TalksController do
       end
 
       it "assigns the requested talk as @talk" do
-        talk = Talk.create! valid_attributes
         put :update, {:id => talk.to_param, :talk => valid_attributes}, valid_session
         assigns(:talk).should eq(talk)
       end
 
       it "redirects to the talk" do
-        talk = Talk.create! valid_attributes
         put :update, {:id => talk.to_param, :talk => valid_attributes}, valid_session
         response.should redirect_to(talk)
       end
@@ -105,7 +114,6 @@ describe TalksController do
 
     describe "with invalid params" do
       it "assigns the talk as @talk" do
-        talk = Talk.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Talk.any_instance.stub(:save).and_return(false)
         put :update, {:id => talk.to_param, :talk => { "title" => "invalid value" }}, valid_session
@@ -113,7 +121,6 @@ describe TalksController do
       end
 
       it "re-renders the 'edit' template" do
-        talk = Talk.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Talk.any_instance.stub(:save).and_return(false)
         put :update, {:id => talk.to_param, :talk => { "title" => "invalid value" }}, valid_session
@@ -124,14 +131,12 @@ describe TalksController do
 
   describe "DELETE destroy" do
     it "destroys the requested talk" do
-      talk = Talk.create! valid_attributes
       expect {
         delete :destroy, {:id => talk.to_param}, valid_session
       }.to change(Talk, :count).by(-1)
     end
 
     it "redirects to the talks list" do
-      talk = Talk.create! valid_attributes
       delete :destroy, {:id => talk.to_param}, valid_session
       response.should redirect_to(talks_url)
     end
