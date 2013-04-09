@@ -14,4 +14,4 @@
       %td= link_to 'Edit', edit_talk_path(talk)
       %td= link_to 'Destroy', talk, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
-= link_to 'New Talk', new_talk_path
+= link_to 'New Talk', params[:event_id] ? new_event_talk_path : new_talk_path

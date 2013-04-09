@@ -1,10 +1,11 @@
 class TalksController < ApplicationController
-  before_filter :load_data, [:new, :edit]
+  before_filter :load_data
 
   # GET /talks
   # GET /talks.json
   def index
-    @talks = Talk.all
+    @event = Event.includes(:talks).find(params[:event_id]) if params[:event_id]
+    @talks = @event.present? ? @event.talks : Talk.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,8 +16,6 @@ class TalksController < ApplicationController
   # GET /talks/1
   # GET /talks/1.json
   def show
-    @talk = Talk.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @talk }
@@ -27,6 +26,8 @@ class TalksController < ApplicationController
   # GET /talks/new.json
   def new
     @talk = Talk.new
+    @event_id = params[:event_id] if params[:event_id]
+    load_future_data
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,7 +37,7 @@ class TalksController < ApplicationController
 
   # GET /talks/1/edit
   def edit
-    @talk = Talk.find(params[:id])
+    load_future_data
   end
 
   # POST /talks
@@ -58,8 +59,6 @@ class TalksController < ApplicationController
   # PUT /talks/1
   # PUT /talks/1.json
   def update
-    @talk = Talk.find(params[:id])
-
     respond_to do |format|
       if @talk.update_attributes(params[:talk])
         format.html { redirect_to @talk, notice: 'Talk was successfully updated.' }
@@ -74,7 +73,6 @@ class TalksController < ApplicationController
   # DELETE /talks/1
   # DELETE /talks/1.json
   def destroy
-    @talk = Talk.find(params[:id])
     @talk.destroy
 
     respond_to do |format|
@@ -86,6 +84,10 @@ class TalksController < ApplicationController
   private
 
   def load_data
+    @talk = Talk.find(params[:id]) if params[:id]
+  end
+
+  def load_future_data
     @future_events = Event.where("date >= ?", Time.now).order("date")
   end
 end
