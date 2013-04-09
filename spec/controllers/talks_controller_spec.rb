@@ -39,6 +39,13 @@ describe TalksController do
       get :new, {}, valid_session
       assigns(:future_events).should include(event)
     end
+
+    context 'talk created from event page' do
+      it 'assings @event_id' do
+        get :new, {event_id: 1}, valid_session
+        assigns(:event_id).should eq("1")
+      end
+    end
   end
 
   describe "GET edit" do

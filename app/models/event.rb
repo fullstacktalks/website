@@ -5,4 +5,6 @@ class Event < ActiveRecord::Base
   has_many :talks
 
   validates_presence_of :title, :date
+
+  scope :future, -> { where("date >= ?", Time.now).order("date") }
 end

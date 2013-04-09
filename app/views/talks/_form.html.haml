@@ -17,6 +17,6 @@
     = f.text_field :description
   .field
     = f.label :event_id
-    = f.collection_select(:event_id, @future_events, :id, :title)
+    = f.collection_select(:event_id, @future_events, :id, :title, selected: @event_id)
   .actions
     = f.submit 'Save', class: 'btn'
