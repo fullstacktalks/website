@@ -6,6 +6,7 @@ gem 'pg'
 gem 'rails', '3.2.13'
 gem 'thin'
 gem 'bugsnag'
+gem 'rack-rewrite'
 
 group :development, :test do
   gem 'capybara'

@@ -11,6 +11,10 @@ end
 
 module FullStackTalks
   class Application < Rails::Application
+    config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+      r301 %r{.*}, 'http://fullstacktalks.com$&',
+        :if => Proc.new { |rack_env| rack_env['SERVER_NAME'] != 'fullstacktalks.com' }
+    end
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -32,7 +36,6 @@ module FullStackTalks
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
