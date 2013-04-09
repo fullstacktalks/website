@@ -20,7 +20,7 @@ describe PeopleController do
     end
 
     it "routes to #create" do
-      post("/people").should route_to("people#create")
+      post("/people").should route_to("devise/registrations#create")
     end
 
     it "routes to #update" do
