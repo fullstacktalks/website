@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '3.2.13'
 gem 'thin'
+gem 'bugsnag'
 
 group :development, :test do
   gem 'capybara'
