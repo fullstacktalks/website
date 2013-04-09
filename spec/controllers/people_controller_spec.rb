@@ -4,9 +4,9 @@ describe PeopleController do
 
   def valid_attributes
     {
-      "name" => "MyString",
-      "email" => "MyString",
-      "password" => "MyString"
+      "name" => "Chan",
+      "email" => "user@email.com",
+      "password" => "123456789"
      }
   end
 
