@@ -8,6 +8,7 @@ gem 'thin'
 gem 'bugsnag'
 gem 'rack-rewrite'
 gem 'newrelic_rpm'
+gem 'devise'
 
 group :development, :test do
   gem 'capybara'
