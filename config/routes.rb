@@ -1,4 +1,6 @@
 FullStackTalks::Application.routes.draw do
+  devise_for :people
+
   root :to => 'pages#index'
   resources :events do
     resources :talks
