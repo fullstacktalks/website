@@ -1,4 +1,6 @@
 class TalksController < ApplicationController
+  before_filter :load_data, [:new, :edit]
+
   # GET /talks
   # GET /talks.json
   def index
@@ -25,7 +27,6 @@ class TalksController < ApplicationController
   # GET /talks/new.json
   def new
     @talk = Talk.new
-    @future_events = Event.where("date >= ?", Time.now).order("date")
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,7 +37,6 @@ class TalksController < ApplicationController
   # GET /talks/1/edit
   def edit
     @talk = Talk.find(params[:id])
-    @future_events = Event.where("date >= ?", Time.now).order("date")
   end
 
   # POST /talks
@@ -81,5 +81,11 @@ class TalksController < ApplicationController
       format.html { redirect_to talks_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def load_data
+    @future_events = Event.where("date >= ?", Time.now).order("date")
   end
 end
