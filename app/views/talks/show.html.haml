@@ -7,7 +7,8 @@
   = @talk.description
 %p
   %b What Event?:
-  = @talk.event.title
+  = @talk.event.title if @talk.event
+
 = link_to 'Edit', edit_talk_path(@talk)
 |
 \#{link_to 'Back', talks_path}
