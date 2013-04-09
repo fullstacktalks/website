@@ -19,4 +19,4 @@
     = f.label :event_id
     = f.collection_select(:event_id, @future_events, :id, :title)
   .actions
-    = f.submit
+    = f.submit, class: 'btn'
