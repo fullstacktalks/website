@@ -32,4 +32,36 @@ describe EventsController do
     end
 
   end
+
+  describe "nested talk routing" do
+
+    it "routes to talks#index" do
+      get("/events/1/talks").should route_to("talks#index", :event_id => "1")
+    end
+
+    it "routes to talks#new" do
+      get("/events/1/talks/new").should route_to("talks#new", :event_id => "1")
+    end
+
+    it "routes to talks#show" do
+      get("/events/1/talks/1").should route_to("talks#show", :event_id => "1", :id => "1")
+    end
+
+    it "routes to talks#edit" do
+      get("/events/1/talks/1/edit").should route_to("talks#edit", :event_id => "1", :id => "1")
+    end
+
+    it "routes to talks#create" do
+      post("/events/1/talks").should route_to("talks#create", :event_id => "1")
+    end
+
+    it "routes to talks#update" do
+      put("/events/1/talks/1").should route_to("talks#update", :event_id => "1", :id => "1")
+    end
+
+    it "routes to talks#destroy" do
+      delete("/events/1/talks/1").should route_to("talks#destroy" , :event_id => "1", :id => "1")
+    end
+
+  end
 end
