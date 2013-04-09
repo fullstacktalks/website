@@ -2,7 +2,8 @@
 
 FactoryGirl.define do
   factory :talk do
-    title "MyString"
-    description "MyString"
+    title "Talk Title"
+    description "Talk Description"
+    event
   end
 end

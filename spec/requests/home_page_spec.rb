@@ -28,13 +28,27 @@ describe 'Home Page' do
   end
 
   context 'when a next event exists' do
-    before(:each) do
-      create(:event, title: 'Hello World', date: Date.tomorrow)
-    end
+    let!(:event) { create(:event, title: 'Hello World', date: Date.tomorrow) }
 
     it 'should have next event object' do
       get '/'
       expect(response.body).to include('Hello World')
+    end
+
+    context 'when there are no upcoming talks' do
+      it 'should present no upcoming talks message' do
+        get '/'
+        expect(response.body).to include('No more talks!')
+      end
+    end
+
+    context 'when there are upcoming talks' do
+      let!(:talk) { create(:talk, event: event) }
+
+      it 'should have talk list' do
+        get '/'
+        expect(response.body).to include("Talk Title")
+      end
     end
   end
 
