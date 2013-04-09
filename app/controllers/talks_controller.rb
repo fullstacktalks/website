@@ -26,7 +26,6 @@ class TalksController < ApplicationController
   def new
     @talk = Talk.new
     @future_events = Event.where("date >= ?", Time.now).order("date")
-    # @future_event_hash = @future_events.map { |model| model.attributes.slice(:id, :title) }
 
     respond_to do |format|
       format.html # new.html.erb
