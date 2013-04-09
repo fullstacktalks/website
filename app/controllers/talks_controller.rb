@@ -27,7 +27,7 @@ class TalksController < ApplicationController
   def new
     @talk = Talk.new
     @event_id = params[:event_id] if params[:event_id]
-    load_future_data
+    @future_events = Event.future
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,7 +37,7 @@ class TalksController < ApplicationController
 
   # GET /talks/1/edit
   def edit
-    load_future_data
+    @future_events = Event.future
   end
 
   # POST /talks
@@ -85,9 +85,5 @@ class TalksController < ApplicationController
 
   def load_data
     @talk = Talk.find(params[:id]) if params[:id]
-  end
-
-  def load_future_data
-    @future_events = Event.where("date >= ?", Time.now).order("date")
   end
 end
