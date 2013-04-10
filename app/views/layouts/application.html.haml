@@ -6,7 +6,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %p.notice= notice
-    %p.alert= alert
+    - flash.each do |key, message|
+      %p{ class: key }= message
     .container
       = yield
