@@ -30,3 +30,11 @@ Spork.each_run do
   FactoryGirl.reload
   RSpec.configuration.seed = srand && srand % 0xFFFF
 end
+
+def sign_in
+  @person = create(:person)
+  visit "/people/sign_in"
+  fill_in "Email", :with => @person.email
+  fill_in "Password", :with => @person.password
+  click_button "Sign in"
+end
