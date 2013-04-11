@@ -9,6 +9,16 @@ h3
 h4
   font-size: 18px
 
+a
+  color: #fff
+  display: block
+a:hover
+  background-color: rgba(0,0,0,0.2)
+  +border-radius(30px)
+  text-decoration: none
+  color: #fff
+
+
 .tagline
   @extend %uppercase_text
   color: #d16759
@@ -16,6 +26,48 @@ h4
   position: relative
   top: 53px
   left: 47px
+
+.event_month_title
+  h1
+    text-align: center
+    position: relative
+    span
+      @extend %uppercase_text
+      @extend %button_texture
+      background-color: #d16759
+      border: #933a2e 1px solid
+      text-shadow: 0px -1px 0px rgba(0,0,0,0.5)
+      color: #fff
+      font-size: 50px
+      font-weight: bolder
+      letter-spacing: 5px
+      line-height: normal
+      text-align: center
+      @extend %inline-block
+      padding: 5px 40px
+      z-index: 2
+      position: relative
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      top: 50%
+      left: 0
+      height: 1px
+      background-color: rgba(0,0,0,0.2)
+      +box-shadow(0px 1px 0px rgba(255,255,255,0.2))
+
+.event_date
+  h2
+    color: #202124
+    letter-spacing: 1px
+    font-weight: bolder
+    font-size: 21px
+    text-align: center
+    span
+      color: #c15f52
+      text-shadow: 0px 1px 0px rgba(0,0,0,0.5)
+
 
 .three_column
   .column
@@ -66,6 +118,28 @@ h4
     font-size: 16px
     text-align: center
     padding: 22px 88px
+
+.speaker_topic
+  color: #202124
+  font-size: 24px
+  font-weight: bold
+  padding: 13px 0px 0px 0px
+
+.speaker_pic_container
+  .speaker_name
+    color: #fff
+    background-color: #d16759!important
+    @extend %button_texture
+    border: #933a2e 1px solid
+    padding: 5px 15px
+    font-size: 20px
+.speaker
+  p.topic_details
+    color: #202124
+    font-size: 17px
+    max-width: 264px
+    margin: 0 auto
+    padding: 10px 0px
 
 footer
   color: #fff

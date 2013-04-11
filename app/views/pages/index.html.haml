@@ -1,20 +1,24 @@
-.wide_bg
+.wide_bg.main_img_container
   .wrapper.main_event_container
     .event_month_title
-      April
+      %h1
+        %span April
     .event_date
-      Thursday 25, 2013
-      %span At 7pm
+      %h2
+        Thursday 25, 2013
+        %span At 7pm
     .speakers_container
       .speaker.speaker_1
         .speaker_pic_container
+          %img{:src => "/assets/zack_face.jpg"}/
           .speaker_name Zack Hubert
         .speaker_topic
           Batman JS
         %p.topic_details
           Bacon ipsum dolor sit amet chuck jowl ground round meatball capicola sirloin biltong filet mignon.
-      .speaker_.speaker_2
+      .speaker.speaker_2
         .speaker_pic_container
+          %img{:src => "/assets/jeff_face.jpg"}/
           .speaker_name Jeff Berg
         .speaker_topic
           Batman JS
