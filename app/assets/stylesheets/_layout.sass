@@ -6,7 +6,7 @@
 body
   font-family: 'Lato', sans-serif
   color: #696c6f
-  background: #aaacb0 url(/assets/light_gray_bg.png) 0px 0px
+  @extend %light_gray_bg
 
 .container
   width: 100%
@@ -21,6 +21,7 @@ body
       float: left
       width: 33.33%
       margin-top: 50px
+
 header
   background-color: rgba(38,40,43,0.9)
   color: #fff
@@ -33,10 +34,7 @@ header
     right: 17px
     top: 19px
     li
-      list-style: none
-      display: inline-block
-      text-transform: uppercase
-      letter-spacing: 2px
+      @extend %basic_nav_styles
       font-size: 16px
       padding: 8px 17px
 
@@ -47,8 +45,19 @@ header
 .wide_bg.dark_bg
   background-color: rgba(26,28,32,0.88)
 
+
+
 footer
   background-color: #333538
   border-top: solid 1px #000
   height: 85px
-
+  .wrapper
+    relative
+    ul.footer_nav
+      position: absolute
+      top: 32px
+      left: 10px
+    .copyright_info
+      position: absolute
+      right: 10px
+      top: 33px

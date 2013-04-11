@@ -1,6 +1,6 @@
 h1,h2,h3,h4,h5,h6
   color: #fff
-  text-transform: uppercase
+  @extend %uppercase_text
   letter-spacing: 3px
   font-weight: normal
 
@@ -8,6 +8,14 @@ h3
   font-size: 20px
 h4
   font-size: 18px
+
+.tagline
+  @extend %uppercase_text
+  color: #d16759
+  letter-spacing: 4px
+  position: relative
+  top: 53px
+  left: 47px
 
 .three_column
   .column
@@ -18,11 +26,58 @@ h4
     p
       text-align: center
       padding: 11px 60px
+
+.dark_bg
+  .details_section
+    h4 span
+      background-color: #292b30
+.light_gray_bg
+  .details_section
+    h4 span
+      @extend %light_gray_bg
+      color: rgba(0,0,0,0.6)
+      font-weight: bold
+      @extend %default_white_textshadow
+
+
+.details_section
+  min-height: 200px
+  padding: 80px 0px 0px 0px
+  h4
+    position: relative
+    text-align: center
+    span
+      position: relative
+      z-index: 2
+      text-align: center
+      @extend %inline-block
+      padding: 0px 21px
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      top: 50%
+      left: 0
+      height: 1px
+      background-color: rgba(0,0,0,0.5)
+      +box-shadow(0px 1px 0px rgba(255,255,255,0.2))
+  p
+    color: #696c6f
+    font-size: 16px
+    text-align: center
+    padding: 22px 88px
+
 footer
   color: #fff
   ul.footer_nav
     li
       display: inline-block
       list-style: none
+      @extend %uppercase_text
+      @extend %basic_nav_styles
+      border-right: 1px solid #fff
       a
         color: #fff
+        padding: 5px 12px
+    li:last-child
+      border: none

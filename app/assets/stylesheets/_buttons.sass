@@ -1,0 +1,28 @@
+%button_texture
+  background: url(/assets/button_line_texture.png)
+
+.btn
+  +border-radius(30px)
+  padding: 12px 30px
+  text-shadow: 0px 1px 0px rgba(0,0,0,0.5)
+  font-size: 18px
+  letter-spacing: 1px
+  +box-shadow(none)
+  display: block
+  @extend %button_texture
+
+.red_btn
+  @extend %uppercase_text
+  background-color: #d16759
+  border: #933a2e 1px solid
+.red_btn:hover
+  background-color: #b24739
+  color: #fff
+.join_btn
+  position: absolute
+  bottom: -34px
+  left: 39%
+.speaker_interest_btn
+  text-align: center
+  width: 162px
+  margin: 0 auto
