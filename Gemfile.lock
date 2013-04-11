@@ -130,6 +130,9 @@ GEM
       skinny (~> 0.2.3)
       sqlite3 (~> 1.3)
       thin (~> 1.5.0)
+    meta_request (0.2.3)
+      rack-contrib
+      railties
     method_source (0.8.1)
     mime-types (1.22)
     multi_json (1.7.2)
@@ -145,6 +148,8 @@ GEM
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-protection (1.5.0)
       rack
     rack-rewrite (1.3.3)
@@ -253,6 +258,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   mailcatcher
+  meta_request
   pg
   rack-rewrite
   rails (= 3.2.13)

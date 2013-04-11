@@ -22,6 +22,7 @@ group :development, :test do
   gem 'rb-fsevent'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'meta_request'
 end
 
 group :assets do
