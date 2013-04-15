@@ -11,7 +11,4 @@ class Person < ActiveRecord::Base
 
   has_many :talks
   has_and_belongs_to_many :events
-
-  validates_presence_of :email, :password
-  validates_uniqueness_of :email
 end
