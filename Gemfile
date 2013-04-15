@@ -7,7 +7,6 @@ gem 'rails', '3.2.13'
 gem 'thin'
 gem 'bugsnag'
 gem 'rack-rewrite'
-gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'capybara'
