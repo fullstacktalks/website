@@ -6,7 +6,7 @@ FullStackTalks::Application.routes.draw do
     resources :talks
   end
   resources :talks
-  resources :people
+  resources :people, only: [:index, :show]
   match 'about' => 'pages#about'
   match 'contact' => 'pages#contact'
 end

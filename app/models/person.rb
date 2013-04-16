@@ -11,4 +11,6 @@ class Person < ActiveRecord::Base
 
   has_many :talks
   has_and_belongs_to_many :events
+
+  scope :public_data, select('id, name, company, position')
 end
