@@ -7,6 +7,8 @@
     = csrf_meta_tags
     %link{:href => "http://fonts.googleapis.com/css?family=Lato", :rel => "stylesheet", :type => "text/css"}/
   %body
+    - flash.each do |key, message|
+      %p{ class: key }= message
     %header
       .wrapper
         .fullstack_logo
