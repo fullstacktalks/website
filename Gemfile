@@ -7,7 +7,6 @@ gem 'rails', '3.2.13'
 gem 'thin'
 gem 'bugsnag'
 gem 'rack-rewrite'
-gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'capybara'
@@ -32,3 +31,5 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'bootstrap-sass', '~> 2.3.1.0'
 end
+
+gem 'newrelic_rpm'
