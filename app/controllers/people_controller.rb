@@ -2,7 +2,7 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    @people = Person.public_data
+    @people = Person.only_public_fields
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class PeopleController < ApplicationController
   # GET /people/1
   # GET /people/1.json
   def show
-    @person = Person.public_data.find(params[:id])
+    @person = Person.only_public_fields.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
