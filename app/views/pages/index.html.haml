@@ -2,11 +2,11 @@
   .wrapper.main_event_container
     .event_month_title
       %h1
-        %span April
+        %span= l @event.date, format: :month
     .event_date
-      %h2
-        Thursday 25, 2013
-    / .speakers_container
+      %h2= l @event.date, format: :short_date
+    .speakers_container
+      %h5= @event.description
     /   .speaker.speaker_1
     /     .speaker_pic_container
     /       %img{:src => "/assets/zack_face.jpg"}/
@@ -15,7 +15,7 @@
     /       Batman JS
     /     %p.topic_details
     /       Bacon ipsum dolor sit amet chuck jowl ground round meatball capicola sirloin biltong filet mignon.
-    %a.btn.red_btn.join_btn
+    %a.btn.red_btn.join_btn{href: @event.url, target: "_blank"}
       Join This Talk
 .wide_bg.gray_bg
   .wrapper.main_event_container
@@ -29,16 +29,16 @@
         %h3
           Where
         %p
-          Planning Center Offices
+          #{@event.location.name}
           %br
-          2790 Gateway Rd.
+          #{@event.location.address}
           %br
-          Carlsbad CA, 92009
+          #{@event.location.city} #{@event.location.state}, #{@event.location.zip}
       .column.column_2
         %h3
           When
         %p
-          7:00pm - 10:00pm
+          #{l @event.date, format: :hour_minute} - #{l @event.date + 3.hours, format: :hour_minute}
 .wide_bg.dark_bg
   .wrapper
     .details_section
@@ -62,8 +62,8 @@
         %span
           Interested in Speaking at Full Stack
       %p
-        Bacon ipsum dolor sit amet hamburger bacon frankfurter fatback venison, strip steak pork loin spare ribs beef drumstick cow jowl. Turducken ball tip spare ribs, turkey frankfurter prosciutto bresaola chuck rump ribeye tail. Cow prosciutto meatloaf ribeye ham hock capicola.
-      %a.btn.red_btn.speaker_interest_btn I'm Interested
+        Kevin is going to put an awesome blurb here about talking at full stack!
+      =mail_to 'talk@fullstacktalks.com', %Q[I'm Interested], :subject => %Q[I'm Interested in Speaking at Full Stack] , :class => "btn red_btn speaker_interest_btn", :target => "_blank"
     .details_section
       %h4
         %span
