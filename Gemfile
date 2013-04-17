@@ -9,6 +9,7 @@ gem 'thin'
 gem 'bugsnag'
 gem 'rack-rewrite'
 gem 'devise'
+gem 'rMeetup'
 gem 'newrelic_rpm'
 
 group :development, :test do
