@@ -11,18 +11,6 @@ describe PagesController do
       get :index
       response.should render_template("index")
     end
-    it "assigns @people" do
-      get :index
-      assigns(:people).should eq([])
-    end
-    it "assigns @next_event" do
-      get :index
-      assigns(:next_event).should eq(nil)
-    end
-    it 'assigns @next_event_talks' do
-      get :index
-      assigns(:next_event_talks).should eq([])
-    end
   end
 
   describe "GET about" do
