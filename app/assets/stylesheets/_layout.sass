@@ -14,13 +14,17 @@ body
   width: 960px
   margin: 0 auto
   position: relative
-  .three_column
+  .three_column,
+  .two_column
     overflow: auto
     min-height: 237px
     .column
       float: left
       width: 33.33%
       margin-top: 65px
+  .two_column
+    .column
+      width: 50%
 
 header
   background-color: rgba(38,40,43,0.9)
@@ -52,7 +56,7 @@ header
   background-color: rgba(26,28,32,0.88)
 
 .main_img_container
-  background: #cbc8b8 url('/assets/main_img.png') no-repeat
+  background: #cbc8b8 url('/assets/main_img.png') no-repeat center center
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
