@@ -10,6 +10,7 @@ gem 'bugsnag'
 gem 'rack-rewrite'
 gem 'devise'
 gem 'rMeetup'
+gem 'figaro'
 gem 'newrelic_rpm'
 
 group :development, :test do
@@ -26,6 +27,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'meta_request'
+  gem 'fakeweb'
+  gem 'pry-rails'
+  gem 'binding_of_caller'
 end
 
 group :assets do
