@@ -15,7 +15,7 @@
     /       Batman JS
     /     %p.topic_details
     /       Bacon ipsum dolor sit amet chuck jowl ground round meatball capicola sirloin biltong filet mignon.
-    %a.btn.red_btn.join_btn{href: @event.url, target: "_blank"}
+    %a.btn.red_btn.join_btn{href: @event.url, target: '_blank'}
       Join This Talk
 .wide_bg.gray_bg
   .wrapper.main_event_container
@@ -62,11 +62,12 @@
         %span
           Interested in Speaking at Full Stack
       %p
-        Kevin is going to put an awesome blurb here about talking at full stack!
-      =mail_to 'talk@fullstacktalks.com', %Q[I'm Interested], :subject => %Q[I'm Interested in Speaking at Full Stack] , :class => "btn red_btn speaker_interest_btn", :target => "_blank"
+        TBD
+      =mail_to 'talk@fullstacktalks.com', %Q[I'm Interested], :subject => %Q[I'm Interested in Speaking at Full Stack] , :class => 'btn red_btn speaker_interest_btn', :target => '_blank'
     .details_section
       %h4
         %span
           Sponsored By
       .sponsor_icons
-        .icon.icon-pco_logo
+        %a{href: 'http://get.planningcenteronline.com/', target: '_blank'}
+          .icon.icon-pco_logo
