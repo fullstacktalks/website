@@ -11,6 +11,7 @@ gem 'rack-rewrite'
 gem 'devise'
 gem 'rMeetup'
 gem 'figaro'
+gem 'dalli'
 gem 'newrelic_rpm'
 
 group :development, :test do
@@ -30,6 +31,7 @@ group :development, :test do
   gem 'fakeweb'
   gem 'pry-rails'
   gem 'binding_of_caller'
+  gem 'quiet_assets'
 end
 
 group :assets do
