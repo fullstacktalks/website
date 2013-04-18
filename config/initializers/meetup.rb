@@ -1,1 +1,1 @@
-RMeetup::Client.api_key = ENV['MEETUP_API_KEY'] || "123456789"
+RMeetup::Client.api_key = ENV['MEETUP_API_KEY']
