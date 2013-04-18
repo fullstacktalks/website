@@ -2,6 +2,7 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 require 'capybara/rspec'
 require 'spork'
+require 'fakeweb'
 
 Spork.prefork do
   Dir[Rails.root.join('spec/support/**/*.rb')].each {|f| require f}
@@ -38,3 +39,6 @@ def sign_in
   fill_in "Password", :with => @person.password
   click_button "Sign in"
 end
+
+FakeWeb.allow_net_connect = false
+FakeWeb.register_uri(:get, 'http://api.meetup.com/events.json/?key=123456789&group_id=7290272&zip=92009', :body => File.expand_path('spec/fixtures/meetup_events_with_group_id.json'))
