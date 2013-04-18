@@ -5,7 +5,7 @@ class Event < ActiveRecord::Base
   has_and_belongs_to_many :people
   has_many :talks
 
-  validates_presence_of :title, :date
+  validates_presence_of :date
 
   scope :future, -> { where("date >= ?", Time.now).order("date") }
 
