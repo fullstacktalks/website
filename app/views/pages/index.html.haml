@@ -1,44 +1,7 @@
-.wide_bg.main_img_container
-  .wrapper.main_event_container
-    .event_month_title
-      %h1
-        %span= l @event.date, format: :month
-    .event_date
-      %h2= l @event.date, format: :short_date
-    .speakers_container
-      %h5= @event.description
-    /   .speaker.speaker_1
-    /     .speaker_pic_container
-    /       %img{:src => "/assets/zack_face.jpg"}/
-    /       .speaker_name Zack Hubert
-    /     .speaker_topic
-    /       Batman JS
-    /     %p.topic_details
-    /       Bacon ipsum dolor sit amet chuck jowl ground round meatball capicola sirloin biltong filet mignon.
-    %a.btn.red_btn.join_btn{href: @event.url, target: '_blank'}
-      Join This Talk
-.wide_bg.gray_bg
-  .wrapper.main_event_container
-    .two_column
-      / .column.column_1
-      /   %h3
-      /     What
-      /   %p
-      /     This meet ups topics will consist of Batman JS, and awesomeness of lliving.
-      .column.column_1
-        %h3
-          Where
-        %p
-          #{@event.location.name}
-          %br
-          #{@event.location.address}
-          %br
-          #{@event.location.city} #{@event.location.state}, #{@event.location.zip}
-      .column.column_2
-        %h3
-          When
-        %p
-          #{l @event.date, format: :hour_minute} - #{l @event.date + 3.hours, format: :hour_minute}
+-if @event.present?
+  = render 'pages/index/event'
+-else
+  = render 'pages/index/no_events'
 .wide_bg.dark_bg
   .wrapper
     .details_section
