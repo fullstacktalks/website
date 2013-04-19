@@ -1,49 +1,7 @@
-.wide_bg.main_img_container
-  .wrapper.main_event_container
-    .event_month_title
-      %h1
-        %span April
-    .event_date
-      %h2
-        Thursday 25, 2013
-        %span At 7pm
-    .speakers_container
-      .speaker.speaker_1
-        .speaker_pic_container
-          %img{:src => "/assets/zack_face.jpg"}/
-          .speaker_name Zack Hubert
-        .speaker_topic
-          Batman JS
-        %p.topic_details
-          Bacon ipsum dolor sit amet chuck jowl ground round meatball capicola sirloin biltong filet mignon.
-      .speaker.speaker_2
-        .speaker_pic_container
-          %img{:src => "/assets/jeff_face.jpg"}/
-          .speaker_name Jeff Berg
-        .speaker_topic
-          Batman JS
-        %p.topic_details
-          Bacon ipsum dolor sit amet chuck jowl ground round meatball capicola sirloin biltong filet mignon.
-    %a.btn.red_btn.join_btn
-      Join This Talk
-.wide_bg.gray_bg
-  .wrapper.main_event_container
-    .three_column
-      .column.column_1
-        %h3
-          What
-        %p
-          This meet ups topics will consist of Batman JS, and awesomeness of lliving.
-      .column.column_2
-        %h3
-          Where
-        %p
-          Planning Center Offices 2790 Gateway Rd. Carlsbad CA, 92009
-      .column.column_3
-        %h3
-          When
-        %p
-          7:00pm - 10:00pm
+-if @event.present?
+  = render 'pages/index/event'
+-else
+  = render 'pages/index/no_events'
 .wide_bg.dark_bg
   .wrapper
     .details_section
@@ -52,7 +10,7 @@
         %span
           What is full stack
       %p
-        Bacon ipsum dolor sit amet hamburger bacon frankfurter fatback venison, strip steak pork loin spare ribs beef drumstick cow jowl. Turducken ball tip spare ribs, turkey frankfurter prosciutto bresaola chuck rump ribeye tail. Cow prosciutto meatloaf ribeye ham hock capicola.
+        Full Stack: North County is an event where web designers and developers can come together to learn from and teach each other about emerging technologies. While speakers at Full Stack focuss primarily on Ruby, JavaScript, HTML, and CSS, we encourage all local web professionals to join us for vivid discussions around technology across the stack in any language.
     .details_section
       .icon.icon-beer_icon
       %h4
@@ -67,50 +25,12 @@
         %span
           Interested in Speaking at Full Stack
       %p
-        Bacon ipsum dolor sit amet hamburger bacon frankfurter fatback venison, strip steak pork loin spare ribs beef drumstick cow jowl. Turducken ball tip spare ribs, turkey frankfurter prosciutto bresaola chuck rump ribeye tail. Cow prosciutto meatloaf ribeye ham hock capicola.
-      %a.btn.red_btn.speaker_interest_btn I'm Interested
+        TBD
+      =mail_to 'talk@fullstacktalks.com', %Q[I'm Interested], :subject => %Q[I'm Interested in Speaking at Full Stack] , :class => 'btn red_btn speaker_interest_btn', :target => '_blank'
     .details_section
       %h4
         %span
           Sponsored By
       .sponsor_icons
-        .icon.icon-pco_logo
-
-
-
-
-
-
-
-/ %h1 Full Stack Talks
-
-/ %h3= link_to "People", people_path
-/ %table
-/   %tr
-/     %th Name
-/     %th Company
-/     %th Position
-/     %th
-/   - if  @people.empty?
-/     %tr
-/       %td{ colspan: 4 } #{link_to 'Add some peeps!', new_person_path}
-/   - else
-/     - @people.each do |person|
-/       %tr
-/         %td= person.name
-/         %td= person.company
-/         %td= person.position
-/         %td= link_to 'Show', person
-/ %br
-/   - if @next_event.nil?
-/     %span No more events!
-/   - else
-/     %h3 Next Event
-/     %h5= l @next_event.date, format: :medium
-/     %p #{@next_event.title} #{link_to 'Show', @next_event}
-/     - if @next_event_talks.empty?
-/       %span No more talks!
-/     - else
-/       - @next_event_talks.each do |talk|
-/         %p #{talk.title}: #{talk.description}
-/ %br
+        %a{href: 'http://get.planningcenteronline.com/', target: '_blank'}
+          .icon.icon-pco_logo
