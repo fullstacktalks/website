@@ -6,3 +6,6 @@ en:
   time:
     formats:
       medium: "%A, %b %y %I:%M %p"
+      short_date: "%A %d, %Y"
+      month: "%B"
+      hour_minute: "%I:%M%p"

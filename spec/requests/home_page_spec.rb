@@ -2,9 +2,24 @@ require 'spec_helper'
 
 describe 'Home Page' do
 
-  it 'should have a title' do
-    get '/'
-    expect(response.body).to include('Full Stack Talks')
+  # it 'should have a title' do
+  #   get '/'
+  #   expect(response.body).to include('FullStackTalks')
+  # end
+
+  context 'with no upcoming events' do
+    it 'displays fallback message' do
+      RMeetup::Client.should_receive(:fetch).and_return([])
+      get '/'
+      expect(response.body).to include('No upcoming events')
+    end
+  end
+
+  context 'with upcoming event available' do
+    it 'displays the upcoming event' do
+      get '/'
+      expect(response.body).to include('Planning Center Online Offices')
+    end
   end
 
   # context 'when there are no people' do
