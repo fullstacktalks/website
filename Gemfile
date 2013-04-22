@@ -14,6 +14,10 @@ gem 'figaro'
 gem 'dalli'
 gem 'newrelic_rpm'
 
+group :production do
+  gem 'rack-google-analytics', :require => 'rack/google-analytics'
+end
+
 group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
