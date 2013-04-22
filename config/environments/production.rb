@@ -68,6 +68,5 @@ FullStackTalks::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.gem 'rack-google-analytics', :lib => 'rack/google-analytics'
   config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-40335994-1'
 end
