@@ -12,7 +12,7 @@ class Event < ActiveRecord::Base
   def self.new_from_meetup( request )
     new({
       date: request.time,
-      description: ActionView::Base.full_sanitizer.sanitize(request.description),
+      description: request.description,
       url: request.event_url,
       location: Location.new_from_meetup(request)
     })

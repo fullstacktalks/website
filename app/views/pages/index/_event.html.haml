@@ -6,9 +6,7 @@
     .event_date
       %h2= l @event.date, format: :short_date
     .event_topic_container
-      = image_tag 'open_mic.png', :alt => 'Open Mic Night', :class => "open_mic_image"
-      %h3.center-it.cap-it.sub_event_header Open Mic Night
-      %p.topic_details= @event.description
+      %div.topic_details!= @event.description
     %a.btn.red_btn.join_btn{href: @event.url, target: '_blank'}
       Join This Talk
 .wide_bg.gray_bg
