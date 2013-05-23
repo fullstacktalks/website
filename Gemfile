@@ -40,8 +40,6 @@ group :development, :test do
   gem 'fakeweb'
   gem 'pry-rails'
   gem 'quiet_assets'
-  gem 'better_errors'
-  gem 'binding_of_caller'
 end
 
 group :assets do
