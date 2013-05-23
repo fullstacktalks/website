@@ -10,11 +10,11 @@ class Location
 
   def self.new_from_meetup( request )
     new({
-      name: request.venue_name,
-      address:  request.venue_address1,
-      zip:  request.venue_zip,
-      city: request.venue_city,
-      state: request.venue_state
+      name: request.venue.name,
+      address:  request.venue.address_1,
+      zip:  request.venue.zip,
+      city: request.venue.city,
+      state: request.venue.state
     })
   end
 end
