@@ -18,6 +18,11 @@ group :production do
   gem 'rack-google-analytics', :require => 'rack/google-analytics'
 end
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
 group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
@@ -34,7 +39,6 @@ group :development, :test do
   gem 'meta_request'
   gem 'fakeweb'
   gem 'pry-rails'
-  gem 'binding_of_caller'
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'

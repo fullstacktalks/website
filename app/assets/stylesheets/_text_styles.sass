@@ -135,17 +135,28 @@ a:hover
     padding: 5px 15px
     font-size: 20px
 .speaker, .event_topic_container
-  p.topic_details
+  .topic_details
     color: #202124
     font-size: 17px
     margin: 0 auto
     padding: 10px 0px
 .speaker
-  p.topic_details
+  .topic_details
     max-width: 264px
 .event_topic_container
-  p.topic_details
+  .topic_details
     text-align: center
+    p
+      padding: 10px
+      strong
+        display: block
+        font-size: 30px
+        margin-bottom: 16px
+      em
+        color: #fff
+        background-color: rgba(0,0,0,0.5)
+        padding: 3px 12px
+        +border-radius(15px)
 
 footer
   color: #fff
