@@ -16,11 +16,13 @@
         %h3
           Where
         %p
-          #{@event.location.name}
+          =@event.location.name
           %br
-          #{@event.location.address}
+          =@event.location.address
           %br
-          #{@event.location.city} #{@event.location.state}, #{@event.location.zip}
+          =@event.location.city
+          #{@event.location.state},
+          =@event.location.zip
       .column.column_2
         %h3
           When
