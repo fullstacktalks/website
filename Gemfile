@@ -9,7 +9,7 @@ gem 'thin'
 gem 'bugsnag'
 gem 'rack-rewrite'
 gem 'devise'
-gem 'rMeetup'
+gem 'rMeetup', :git => 'git://github.com/tannermares/rmeetup.git'
 gem 'figaro'
 gem 'dalli'
 gem 'newrelic_rpm'
@@ -36,6 +36,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'binding_of_caller'
   gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :assets do
