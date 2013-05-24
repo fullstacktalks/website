@@ -41,4 +41,5 @@ def sign_in
 end
 
 FakeWeb.allow_net_connect = false
-FakeWeb.register_uri(:get, 'http://api.meetup.com/events.json/?key=123456789&group_id=7290272', :body => File.expand_path('spec/fixtures/meetup_events_with_group_id.json'))
+FakeWeb.register_uri(:get, 'http://api.meetup.com/2/events/?key=123456789&group_id=7290272', :body => File.expand_path('spec/fixtures/meetup_events_with_group_id.json'))
+FakeWeb.register_uri(:get, 'http://api.meetup.com/2/groups/?key=123456789&group_id=7290272', :body => File.expand_path('spec/fixtures/meetup_groups_with_group_id.json'))
