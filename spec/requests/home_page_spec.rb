@@ -10,6 +10,7 @@ describe 'Home Page' do
   context 'with no upcoming events' do
     it 'displays fallback message' do
       RMeetup::Client.should_receive(:fetch).and_return([])
+      RMeetup::Client.should_receive(:fetch).and_return([])
       get '/'
       expect(response.body).to include('No upcoming events')
     end
