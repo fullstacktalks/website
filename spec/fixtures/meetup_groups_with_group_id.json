@@ -1,0 +1,103 @@
+{
+  "results": [
+    {
+      "lon": -117.2699966430664,
+      "visibility": "public",
+      "organizer": {
+        "name": "Jeff Berg",
+        "member_id": 34361692
+      },
+      "link": "http://www.meetup.com/Full-Stack-North-County/",
+      "state": "CA",
+      "join_mode": "open",
+      "who": "Developers",
+      "country": "US",
+      "city": "Carlsbad",
+      "id": 7290272,
+      "category": {
+        "id": 34,
+        "name": "tech",
+        "shortname": "tech"
+      },
+      "topics": [
+        {
+          "id": 455,
+          "urlkey": "php",
+          "name": "PHP"
+        },
+        {
+          "id": 563,
+          "urlkey": "opensource",
+          "name": "Open Source"
+        },
+        {
+          "id": 1040,
+          "urlkey": "ruby",
+          "name": "Ruby"
+        },
+        {
+          "id": 7029,
+          "urlkey": "javascript",
+          "name": "JavaScript"
+        },
+        {
+          "id": 15582,
+          "urlkey": "web-development",
+          "name": "Web Development"
+        },
+        {
+          "id": 17627,
+          "urlkey": "programming",
+          "name": "Programming"
+        },
+        {
+          "id": 17936,
+          "urlkey": "scala",
+          "name": "Scala"
+        },
+        {
+          "id": 20837,
+          "urlkey": "ruby-on-rails",
+          "name": "Ruby On Rails"
+        },
+        {
+          "id": 29661,
+          "urlkey": "clojure",
+          "name": "Clojure"
+        },
+        {
+          "id": 78565,
+          "urlkey": "html5",
+          "name": "HTML5"
+        }
+      ],
+      "group_photo": {
+        "photo_link": "http://photos1.meetupstatic.com/photos/event/1/5/7/4/600_207305492.jpeg",
+        "highres_link": "http://photos1.meetupstatic.com/photos/event/1/5/7/4/highres_207305492.jpeg",
+        "thumb_link": "http://photos1.meetupstatic.com/photos/event/1/5/7/4/thumb_207305492.jpeg",
+        "photo_id": 207305492
+      },
+      "created": 1361486475000,
+      "description": "<p>Full Stack: North County is an event where web designers and developers can come together to learn from and teach each other about emerging technologies. While speakers at Full Stack focuss primarily on Ruby, JavaScript, HTML, and CSS, we encourage all local web professionals to join us for vivid discussions around technology across the stack in any language.</p>\n<p> </p>\n<p><strong>Hang &amp; Code:</strong> <em>Till you leave or we kick you out</em></p>\n<p> </p>\n<p>After the talks, we'll have three XBox systems linked playing Halo 4 , as well as billiards and shuffleboard.</p>\n<p>You're also welcome to make use of our desk space and team rooms while you're here, so feel free to bring a project to hack on after the talks.</p>\n<p> </p>",
+      "name": "Full Stack: North County",
+      "rating": 4.96,
+      "urlname": "Full-Stack-North-County",
+      "lat": 33.099998474121094,
+      "members": 118
+    }
+  ],
+  "meta": {
+    "lon": "",
+    "count": 1,
+    "link": "http://api.meetup.com/2/groups/",
+    "next": "",
+    "total_count": 1,
+    "url": "http://api.meetup.com/2/groups/?group_id=7290272&radius=25.0&sig_id=82758722&order=id&desc=false&sig=f73e1278fc78c975a1dac85b2457a6bf0eceb4da&offset=0&format=json&page=500&fields=",
+    "id": "",
+    "title": "Meetup Groups v2",
+    "updated": 1369333434000,
+    "description": "\"\"",
+    "method": "Groups",
+    "lat": ""
+  }
+}
