@@ -9,8 +9,7 @@
       %h4
         %span
           What is full stack
-      %p
-        !=@group.description
+      != @group.description
     .details_section
       .icon.icon-beer_icon
       %h4
@@ -20,13 +19,6 @@
         Come with a thirst for knowledge and for some good ol’ craft beer!
 .wide_bg.light_gray_bg
   .wrapper
-    .details_section
-      %h4
-        %span
-          Interested in Speaking at Full Stack
-      %p
-        TBD
-      =mail_to 'talk@fullstacktalks.com', %Q[I'm Interested], :subject => %Q[I'm Interested in Speaking at Full Stack] , :class => 'btn red_btn speaker_interest_btn', :target => '_blank'
     .details_section
       %h4
         %span
