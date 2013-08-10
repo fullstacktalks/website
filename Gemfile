@@ -4,7 +4,7 @@ ruby "2.0.0"
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'pg'
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.14'
 gem 'thin'
 gem 'bugsnag'
 gem 'rack-rewrite'

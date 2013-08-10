@@ -1,0 +1,29 @@
+= form_for(@job) do |f|
+  - if @job.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@job.errors.count, "error")
+        prohibited this person from being saved:
+      %ul
+        - @job.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :company
+    = f.text_field :company
+  .field
+    = f.label :url
+    = f.text_field :url
+  .field
+    = f.label :type
+    %select
+      - Job::EMPLOYMENT.each do |type|
+        %option
+          = type
+  .actions
+    = f.submit 'Publish', class: 'btn red_btn join_btn'
