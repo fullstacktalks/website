@@ -13,6 +13,7 @@ gem 'rMeetup', :git => 'git://github.com/tannermares/rmeetup.git'
 gem 'figaro'
 gem 'dalli'
 gem 'newrelic_rpm'
+gem 'redcarpet'
 
 group :production do
   gem 'rack-google-analytics', :require => 'rack/google-analytics'

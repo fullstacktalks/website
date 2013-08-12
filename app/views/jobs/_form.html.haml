@@ -21,7 +21,7 @@
     = f.text_field :url
   .field
     = f.label :type
-    %select
+    %select{:name => 'job[position_type]'}
       - Job::EMPLOYMENT.each do |type|
         %option
           = type

@@ -13,16 +13,14 @@
         %span Full Stack: North County Jobs
       %p Looking for a Job? Need a developer or designer? Live in the San Diego greater area? Then you've come to the right place Full Stack: North County is a once monthly meetup group for Web Designers and Web Developers.
 
-      %table
-        %tr
-          %th Title
-          %th Location
-          %th Date
-          %th Description
-          %th
-          %th
-          %th
-
+      %table.jobs
         - @jobs.each do |job|
           %tr
-            %td= job.title
+            %td.title
+              %h3= link_to job.title, job_path(job)
+              %span
+                =link_to job.company, "http://#{job.url}"
+                &nbsp;-&nbsp;
+                = job.position_type
+            %td
+              %p= time_ago_in_words(job.created_at)
