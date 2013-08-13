@@ -4,7 +4,7 @@ ruby "2.0.0"
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'pg'
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.14'
 gem 'thin'
 gem 'bugsnag'
 gem 'rack-rewrite'
@@ -13,6 +13,8 @@ gem 'rMeetup', :git => 'git://github.com/tannermares/rmeetup.git'
 gem 'figaro'
 gem 'dalli'
 gem 'newrelic_rpm'
+gem 'redcarpet'
+gem "paperclip", "~> 3.4.0"
 
 group :production do
   gem 'rack-google-analytics', :require => 'rack/google-analytics'

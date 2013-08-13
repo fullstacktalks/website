@@ -1,0 +1,14 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @job.title
+%p
+  %b Company:
+  = @job.company
+%p
+  %b Description:
+  = markdown @job.description
+%p
+  %b URL:
+  = @job.url
