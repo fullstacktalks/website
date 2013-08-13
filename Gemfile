@@ -14,6 +14,7 @@ gem 'figaro'
 gem 'dalli'
 gem 'newrelic_rpm'
 gem 'redcarpet'
+gem "paperclip", "~> 3.4.0"
 
 group :production do
   gem 'rack-google-analytics', :require => 'rack/google-analytics'

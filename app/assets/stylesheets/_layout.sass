@@ -95,12 +95,39 @@ header
     display: block
 
 .jobs
-  width: 540px
+  width: 580px
   margin: 0 auto
   tr
     display: block
     border-bottom: rgba(0,0,0,0.5) solid 1px
     +box-shadow(0px 1px 0px rgba(255,255,255,0.2))
+  .title
+    width: 300px
+.new_job
+  margin: 25px 0 0 0
+  input[type="text"]
+    font-family: "Lato", sans-serif
+  .join_btn
+    margin: 0
+
+  .new_job_left
+    float: left
+    margin-right: 40px
+  .new_job_right
+    float: left
+    input[type="file"]
+      line-height: 7px
+    input[type="text"]
+      width: 302px
+  #job_title
+    float: left
+    margin-right: 20px
+    width: 350px
+
+  #job_description
+    clear: both
+    width: 590px
+    height: 350px
 
 footer
   background-color: #333538

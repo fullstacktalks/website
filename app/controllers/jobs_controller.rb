@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.all
+    @jobs = Job.all(:conditions => ["created_at > ?", 30.days.ago])
   end
 
   def show
@@ -23,4 +23,5 @@ class JobsController < ApplicationController
       render action: "new"
     end
   end
+
 end

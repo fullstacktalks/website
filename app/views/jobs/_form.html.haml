@@ -7,23 +7,22 @@
       %ul
         - @job.errors.full_messages.each do |msg|
           %li= msg
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :description
-    = f.text_area :description
-  .field
-    = f.label :company
-    = f.text_field :company
-  .field
-    = f.label :url
-    = f.text_field :url
-  .field
-    = f.label :type
-    %select{:name => 'job[position_type]'}
-      - Job::EMPLOYMENT.each do |type|
-        %option
-          = type
-  .actions
+  .new_job_left
+    .field
+      = f.text_field :title, :placeholder => 'Job Title'
+    .field
+      %select{:name => 'job[position_type]'}
+        - Job::EMPLOYMENT.each do |type|
+          %option
+            = type
+    .field
+      = f.text_area :description, :placeholder => 'Job Description'
+  .new_job_right
+    .field
+      = f.file_field :company_logo
+    .field
+      = f.text_field :company, :placeholder => 'Company Name'
+    .field
+      = f.text_field :url, :placeholder => 'Company URL'
     = f.submit 'Publish', class: 'btn red_btn join_btn'
+  %div{:style => 'clear:both;'}
