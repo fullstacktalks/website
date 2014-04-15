@@ -44,9 +44,9 @@ group :development, :test do
 end
 
 group :assets do
-  gem 'bootstrap-sass', '~> 2.3.1.0'
+  gem 'bootstrap-sass', '~> 3.1.1'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'compass-rails'
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails',   '~> 3.2'
   gem 'uglifier', '>= 1.0.3'
 end
