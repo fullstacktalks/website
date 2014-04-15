@@ -11,6 +11,7 @@ gem 'pg'
 gem 'rMeetup', git: 'git://github.com/tannermares/rmeetup.git'
 gem 'rack-rewrite'
 gem 'rails', '~> 3.2.13'
+gem 'rails_12factor'
 gem 'thin'
 
 group :production do
