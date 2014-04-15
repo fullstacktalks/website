@@ -7,7 +7,6 @@ capybara-*.html
 pickle-email-*.html
 rerun.txt
 /.bundle
-/config/application.yml
 /coverage/
 /db/*.sqlite3
 /log/*
