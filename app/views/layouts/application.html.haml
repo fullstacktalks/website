@@ -9,11 +9,15 @@
     - flash.each do |key, message|
       %p{ class: key }= message
     .container
-      %header
-        .icon.icon-full-stack-icon
-        .icon.icon-full-stack-logo
-      = yield
-      %footer
+      %header.page-header
+        %h1
+          .logo
+            .icon.icon-full-stack-icon
+            .icon.icon-full-stack-logo
+          %span Full Stack Talks
+      .page-content
+        = yield
+      %footer.page-footer
         .copyright
           = Time.now.year
           &copy; Full Stack Talks

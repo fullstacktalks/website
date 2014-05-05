@@ -41,8 +41,6 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.1.1.0)
-      sass (~> 3.2)
     bugsnag (1.8.8)
       httparty (>= 0.6, < 1.0)
       multi_json (~> 1.0)
@@ -285,7 +283,6 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  bootstrap-sass (~> 3.1.1)
   bugsnag
   capybara
   coffee-rails (~> 3.2.1)
