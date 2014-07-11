@@ -78,7 +78,6 @@ GEM
       compass (>= 0.12.2)
       sprockets (<= 2.11.0)
     daemons (1.1.9)
-    dalli (2.7.0)
     database_cleaner (1.2.0)
     debug_inspector (0.0.2)
     devise (3.2.4)
@@ -290,7 +289,6 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 3.2.1)
   compass-rails
-  dalli
   database_cleaner
   devise
   dotenv-rails
