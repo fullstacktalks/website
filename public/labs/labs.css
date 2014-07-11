@@ -1,0 +1,96 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,700italic,900italic);
+
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+body {
+  margin: 0;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  background: #353535;
+}
+
+/* utils */
+
+.u-container {
+  position: relative;
+  width: 940px;
+  margin: 0 auto; }
+
+/* labs */
+
+.labs { }
+
+/* labs-header */
+
+.labs-header {
+  padding: 16px;
+  background: #4B94CB; }
+
+  .labs-header__logo { }
+
+/* labs-hero */
+
+.labs-hero {
+  color: #1A547E;
+  background: white url('images/labs-hero-background.jpg') center center;
+  padding: 45px; }
+
+  .labs-hero__logo {
+    display: block;
+    width: 230px;
+    height: 230px;
+    margin: 0 auto; }
+
+  .labs-hero__text {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    margin: 45px 100px 0; }
+
+/* labs-series */
+
+.labs-series {
+  padding: 45px; }
+
+  /* elements */
+
+  .labs-series__index { }
+
+  .labs-series__list {
+    margin: 0;
+    padding: 0; }
+
+  .labs-series__description {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    font-size: 20px;
+    line-height: 30px;
+    color: #1A547E; }
+
+  .labs-series__list {
+    list-style: none;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 300; }
+
+  .labs-series__title {
+    font-size: 65px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 20px; }
+
+  /* modifiers */
+
+  .labs-series--even {
+    background: #4B94CB;
+    border-bottom: 2px solid white; }
+
+  .labs-series--odd {
+    background: #353535; }
+
+    .labs-series--odd .labs-series__description {
+      color: #868686; }
