@@ -47,7 +47,7 @@ body {
 
 .labs-hero {
   color: #1A547E;
-  background: white url('images/labs-hero-background.jpg') center center;
+  background: white url('/labs/images/labs-hero-background.jpg') center center;
   background-size: cover;
   padding: 45px; }
 
