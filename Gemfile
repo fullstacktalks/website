@@ -14,6 +14,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'highline'
 gem 'unicorn'
 
+gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
+
 group :development do
   gem 'spring'
 end
