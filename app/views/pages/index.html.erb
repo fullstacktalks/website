@@ -3,7 +3,7 @@
     <section class="col-xs-7">
       <h2>Previous Events</h2>
       <ul>
-        <li>Event</li>
+        <%= render partial: 'events/item', collection: @page.past_events %>
       </ul>
     </section>
 
