@@ -1,0 +1,11 @@
+@import "_variables";
+
+/* vendor */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* layout */
+.l-application { background: $background-color--dark }
+
+/* controllers */
+@import "pages";

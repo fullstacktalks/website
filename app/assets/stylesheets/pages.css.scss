@@ -1,0 +1,15 @@
+@import "_variables";
+
+.pages-header {
+  color: white;
+  height: 80px;
+}
+
+.pages-body {
+  background: $background-color--light;
+  min-height: 400px;
+}
+
+.pages-footer {
+  color: white;
+}
