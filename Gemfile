@@ -1,51 +1,17 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
 
-gem 'bugsnag'
-gem 'dalli'
-gem 'devise'
-gem 'haml-rails'
-gem 'jquery-rails'
-gem 'newrelic_rpm'
+ruby '2.1.2'
+
+gem 'rails', '4.1.5'
 gem 'pg'
-gem 'rMeetup', git: 'git://github.com/tannermares/rmeetup.git'
-gem 'rack-rewrite'
-gem 'rails', '~> 3.2.13'
-gem 'rails_12factor'
-gem 'thin'
+gem 'sass-rails', '~> 4.0.3'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
 
-group :production do
-  gem 'rack-google-analytics', require: 'rack/google-analytics'
-end
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 2.0'
 
 group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-end
-
-group :development, :test do
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'dotenv-rails'
-  gem 'factory_girl_rails', '~> 4.0.0'
-  gem 'fakeweb'
-  gem 'guard'
-  gem 'guard-spork'
-  gem 'guard-bundler'
-  gem 'guard-rails'
-  gem 'guard-rspec'
-  gem 'mailcatcher'
-  gem 'meta_request'
-  gem 'pry-rails'
-  gem 'quiet_assets'
-  gem 'rb-fsevent'
-  gem 'rspec-rails'
-  gem 'shoulda-matchers'
-end
-
-group :assets do
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'compass-rails'
-  gem 'sass-rails',   '~> 3.2'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'spring'
 end
