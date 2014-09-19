@@ -18,6 +18,7 @@ gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 
 gem 'newrelic_rpm'
+gem 'bugsnag'
 
 group :production do
   gem 'rails_12factor'
