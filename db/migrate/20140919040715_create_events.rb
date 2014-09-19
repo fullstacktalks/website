@@ -1,6 +1,6 @@
-class CreateMeetings < ActiveRecord::Migration
+class CreateEvents < ActiveRecord::Migration
   def change
-    create_table :meetings do |t|
+    create_table :events do |t|
       t.datetime :starts_at, null: false
       t.text :description
       t.string :url, null: false
