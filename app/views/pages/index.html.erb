@@ -1,20 +1,65 @@
-<div class="container">
-  <div class="row">
-    <section class="col-xs-7">
-      <h2>Previous Events</h2>
-      <ul>
-        <%= render partial: 'events/item', collection: @page.past_events %>
-      </ul>
+<!-- logical stuff, for later -->
+
+<!-- <section class="col&#45;xs&#45;7"> -->
+<!--   <h2>Previous Events</h2> -->
+<!--   <ul> -->
+<!--     <%= render partial: 'events/item', collection: @page.past_events %> -->
+<!--   </ul> -->
+<!-- </section> -->
+
+<!-- <section class="col&#45;xs&#45;5"> -->
+<!--   <h2>Next Event</h2> -->
+<!--   <%= render @page.next_event %> -->
+
+<div class="row">
+  <div class="col-xs-12">
+    <section>
+      <h5 class="event-heading">Next Event</h5>
+      <a class="link--bare" href="http://www.meetup.com/Full-Stack-North-County/events/188099762/">
+        <div class="_event _event--upcoming">
+          <div>October 9th</div>
+          <div>Singing with Sinatra: An Intro to Sinatra &mdash; Rigel St. Pierre</div>
+          <div>Web Basics: Javascript &mdash; Kevin Thompson</div>
+        </div>
+      </a>
     </section>
 
-    <section class="col-xs-5">
-      <h2>Next Event</h2>
-      <%= render @page.next_event %>
+    <section>
+      <h5 class="event-heading">Recent Events</h5>
 
-      <h2>About Full Stack</h2>
-      <div>
-        Group Descript
-      </div>
+      <ul class="events list">
+        <li class="list-item">
+          <a class="link--bare" href="http://www.meetup.com/Full-Stack-North-County/events/187691012/">
+            <div class="_event">
+              <div>September 11th</div>
+              <div>The Foreman: Building your infrastructure one server at a time &mdash; Justice London</div>
+              <div>Web Basics: CSS &mdash; AJ Zane</div>
+            </div>
+          </a>
+        </li>
+
+        <li class="list-item">
+          <a class="link--bare" href="http://www.meetup.com/Full-Stack-North-County/events/179090062/">
+            <div class="_event">
+              <div>August 14th</div>
+              <div>Object-Oriented CoffeeScript &mdash; Richard Clayton</div>
+              <div>Web Basics: HTML &mdash; Tanner Mares</div>
+            </div>
+          </a>
+        </li>
+
+        <li class="list-item">
+          <a class="link--bare" href="http://www.meetup.com/Full-Stack-North-County/events/176857882/">
+            <div class="_event">
+              <div>July 10th</div>
+              <div>Angular 101 &mdash; Scott Matthson</div>
+              <div>Improving MySQL Performance &mdash; Jeff Berg</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+      <a style="float: right" href="http://www.meetup.com/Full-Stack-North-County/">More events</a>
     </section>
   </div>
 </div>
