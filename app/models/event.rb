@@ -8,4 +8,12 @@ class Event < ActiveRecord::Base
   def self.past
     where('starts_at < ?', Time.now).order('starts_at DESC')
   end
+
+  def future?
+    !past?
+  end
+
+  def past?
+    starts_at < Time.now
+  end
 end
