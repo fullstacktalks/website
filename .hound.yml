@@ -1,0 +1,11 @@
+coffee_script:
+  enabled: true
+
+javascript:
+  enabled: true
+
+ruby:
+  enabled: true
+
+scss:
+  enabled: true
