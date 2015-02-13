@@ -9,4 +9,5 @@ Full Stack Talks
 
 ## Contributing
 
+[TODO: Write guidelines for contributing...]
 
