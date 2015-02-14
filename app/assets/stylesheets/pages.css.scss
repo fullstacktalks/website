@@ -2,7 +2,7 @@
 
 .pages-header {
   height: 75px;
-  background: white;
+  background: #ffffff;
 }
 
 .pages-body { }
@@ -11,12 +11,12 @@
 
 // details-section
 .details-section {
+  background: #ffffff;
   display: inline-block;
-  width: 100%;
-  position: relative;
   margin-bottom: 1px;
   padding: 16px;
-  background: white;
+  position: relative;
+  width: 100%;
 }
 
 .embed-responsive {
@@ -93,5 +93,5 @@
 
 // utility classes
 .mb0 {
-  margin-bottom: 0px !important;
+  margin-bottom: 0 !important;
 }
