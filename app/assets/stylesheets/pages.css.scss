@@ -9,6 +9,22 @@
 
 .pages-footer { color: #aaa; }
 
+// details-section
+.details-section {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin-bottom: 1px;
+  padding: 16px;
+  background: white;
+}
+
+.embed-responsive {
+  &.embed-responsive-map {
+    padding-bottom: 40%;
+  }
+}
+
 
 // link
 
@@ -73,4 +89,9 @@
     background: #ffdfd4;
     content: '';
   }
+}
+
+// utility classes
+.mb0 {
+  margin-bottom: 0px !important;
 }
