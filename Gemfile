@@ -20,7 +20,7 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'newrelic_rpm'
 gem 'bugsnag'
 
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.3.0'
 gem 'autoprefixer-rails'
 
 group :production do
