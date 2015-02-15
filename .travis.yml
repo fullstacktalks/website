@@ -7,5 +7,9 @@ before_script:
   - bundle exec rake db:migrate
   - bundle exec rake db:test:prepare
 
-env:
-  - MEETUP_API_KEY=123456789 APPLICATION_SECRET_TOKEN=1011011111110110111011110000110001
+notifications:
+  email:
+    recipients:
+      - admin@fullstacktalks.com
+    on_success: never
+    on_failure: always
