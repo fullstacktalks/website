@@ -18,6 +18,8 @@ We strongly recommend using a command line wrapper for git such as `gh` in order
 1. Clone the Full Stack website repo: `git clone https://github.com/fullstacktalks/website.git`
 2. Fork the repo (from inside your cloned directory): `git fork`
 
+The seed data includes an AdminUser. The email for that account is "admin@example.com" and the password is "password".
+
 ### Creating a Branch
 1. Create a feature branch: `git checkout -b feature-my-feature`
 2. Create a pull request from your feature branch: `git pull-request -b fullstacktalks:master`
