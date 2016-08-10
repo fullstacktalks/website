@@ -1,8 +1,0 @@
-<a class="link--bare" href="<%= event.url %>">
-  <div class="_event<% if event.future? %> _event--upcoming<% end %>">
-    <div><%= standard_date(event.starts_at) %></div>
-    <% event.description.lines do |line| %>
-      <div><%= line %></div>
-    <% end %>
-  </div>
-</a>
